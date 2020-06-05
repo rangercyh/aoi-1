@@ -1,4 +1,4 @@
-local print_r = require "print_r"
+-- local print_r = require "print_r"
 local aoi = require "aoi"
 local MAKER_MARK = aoi.MAKER_MARK
 local WATCHER_MARK = aoi.WATCHER_MARK
@@ -154,7 +154,7 @@ local function test1()
     update_aoi(true)
     del_obj(obj6)
     set_obj(obj7, 0, 0)
-    print_r(aoi_obj:aoi_get_objs_by_obj(obj7))
+    -- print_r(aoi_obj:aoi_get_objs_by_obj(obj7))
     print("#######")
     update_aoi(true)
 end
