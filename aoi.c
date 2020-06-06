@@ -1,6 +1,7 @@
 #include <lua.h>
 #include <lualib.h>
 #include <lauxlib.h>
+#include <math.h>
 #include <string.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -97,6 +98,9 @@ lnew_aoiobject(lua_State *L) {
     m->height = mh;
     m->grid_w = gw;
     m->grid_h = gh;
+    m->max_row = ceil(mw / gw);
+    m->max_col = ceil(mh / gh);
+
     lmetatable(L);
     lua_setmetatable(L, -2);
     return 1;
